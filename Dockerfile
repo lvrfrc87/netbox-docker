@@ -123,3 +123,5 @@ RUN apk add --no-cache \
 
 COPY docker/ldap_config.docker.py /opt/netbox/netbox/netbox/ldap_config.py
 COPY configuration/ldap_config.py /etc/netbox/config/ldap_config.py
+
+RUN pip install netbox-animal-sounds

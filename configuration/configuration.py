@@ -210,3 +210,5 @@ TIME_FORMAT = os.environ.get('TIME_FORMAT', 'g:i a')
 SHORT_TIME_FORMAT = os.environ.get('SHORT_TIME_FORMAT', 'H:i:s')
 DATETIME_FORMAT = os.environ.get('DATETIME_FORMAT', 'N j, Y g:i a')
 SHORT_DATETIME_FORMAT = os.environ.get('SHORT_DATETIME_FORMAT', 'Y-m-d H:i')
+
+PLUGINS = ['netbox_animal_sounds']
