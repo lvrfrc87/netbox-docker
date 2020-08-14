@@ -15,9 +15,11 @@ services:
     - ./configuration:/etc/netbox/config:z,ro
     - ./reports:/etc/netbox/reports:z,ro
     - ./scripts:/etc/netbox/scripts:z,ro
+    - ./plugins/netbox_vespa_plugin:/opt/netbox/plugins:rw
     - netbox-nginx-config:/etc/netbox-nginx:z
     - netbox-static-files:/opt/netbox/netbox/static:z
     - netbox-media-files:/opt/netbox/netbox/media:z
+    # command: python3 /opt/netbox/plugins/setup.py develop
   netbox-worker:
     <<: *netbox
     depends_on:
@@ -58,6 +60,13 @@ services:
     - -c # this is to evaluate the $REDIS_PASSWORD from the env
     - redis-server --requirepass $$REDIS_PASSWORD ## $$ because of docker-compose
     env_file: env/redis-cache.env
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - postgres
 volumes:
   netbox-static-files:
     driver: local
