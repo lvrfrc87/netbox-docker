@@ -1,0 +1,9 @@
+README.md
+setup.py
+netbox_vespa_plugin/__init__.py
+netbox_vespa_plugin/admin.py
+netbox_vespa_plugin/models.py
+netbox_vespa_plugin.egg-info/PKG-INFO
+netbox_vespa_plugin.egg-info/SOURCES.txt
+netbox_vespa_plugin.egg-info/dependency_links.txt
+netbox_vespa_plugin.egg-info/top_level.txt
