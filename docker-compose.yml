@@ -19,7 +19,6 @@ services:
     - netbox-nginx-config:/etc/netbox-nginx:z
     - netbox-static-files:/opt/netbox/netbox/static:z
     - netbox-media-files:/opt/netbox/netbox/media:z
-    # command: python3 /opt/netbox/plugins/setup.py develop
   netbox-worker:
     <<: *netbox
     depends_on:

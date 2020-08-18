@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% with config=settings.PLUGINS_CONFIG.netbox_vespa_plugin %}
+<h2 class="text-center" style="margin-top: 200px">
+    {% if vespa %}
+        Model: {{ vespa.vespa_model }}
+        Construction Year: {{ vespa.construction_year }}
+        Number of wheels: {{ vespa.number_of_wheels }}
+        Colour: {{ vespa.colour }}
+        Number of gears: {{ vespa.gear }}
+        Nuts per wheel: {{ vespa.nuts_per_wheel }}
+    {% endif %}
+</h2>
+{% endwith %}
+{% endblock %}
