@@ -1,34 +1,34 @@
-# from extras.plugins import PluginMenuButton, PluginMenuItem
-# from utilities.choices import ButtonColorChoices
+from extras.plugins import PluginMenuButton, PluginMenuItem
+from utilities.choices import ButtonColorChoices
 
+menu_items = (
+    PluginMenuItem(
+        link='plugins:netbox_vespa_plugin:random_vespas',
+        link_text='List all vespas',
+        permissions=[],
+        buttons=(
 
-# # Declare a list of menu items to be added to NetBox's built-in naivgation menu
-# menu_items = (
+            PluginMenuButton(
+                link='plugins:netbox_vespa_plugin:random_vespas', 
+                title='Vespa', 
+                icon_class='fa fa-info', 
+                color=ButtonColorChoices.BLUE
+                ),
 
-#     # Each PluginMenuItem instance renders a custom menu item. Each item may have zero or more buttons.
-#     PluginMenuItem(
-#         link='plugins:netbox_animal_sounds:list_animals',
-#         link_text='List all animals',
-#         permissions=[],
-#         buttons=(
+            PluginMenuButton(
+                link='admin:netbox_vespa_plugin_vespa_add', 
+                title='Add Vespa', 
+                icon_class='fa fa-plus', 
+                color=ButtonColorChoices.GREEN,
+                permissions=['netbox_vespa_plugin.vespa_add']
+                ),
 
-#             # Add a default button which links to the random animal view
-#             PluginMenuButton(
-#                 link='plugins:netbox_animal_sounds:random_animal',
-#                 title='Random animal',
-#                 icon_class='fa fa-question'
-#             ),
-
-#             # Add a green button which links to the admin view to add a new animal. This
-#             # button will appear only if the user has the "add_animal" permission.
-#             PluginMenuButton(
-#                 link='admin:netbox_animal_sounds_animal_add',
-#                 title='Add a new animal',
-#                 icon_class='fa fa-plus',
-#                 color=ButtonColorChoices.GREEN,
-#                 permissions=['netbox_animal_sounds.add_animal']
-#             ),
-#         )
-#     ),
-
-# )
+            # PluginMenuButton(
+            #     link='vespas', 
+            #     title='API', 
+            #     icon_class='fa fa-minus', 
+            #     color=ButtonColorChoices.RED
+            #     ),
+        )
+    ),
+)
