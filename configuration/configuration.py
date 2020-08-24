@@ -213,6 +213,7 @@ SHORT_DATETIME_FORMAT = os.environ.get('SHORT_DATETIME_FORMAT', 'Y-m-d H:i')
 
 PLUGINS = [ 
     'netbox_vespa_plugin',
+    'netbox_animal_sounds',
     ]
 
 DEVELOPER=True
