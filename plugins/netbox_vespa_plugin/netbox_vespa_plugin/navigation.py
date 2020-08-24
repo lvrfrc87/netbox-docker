@@ -9,7 +9,7 @@ menu_items = (
         buttons=(
 
             PluginMenuButton(
-                link='plugins:netbox_vespa_plugin:random_vespas', 
+                link='plugins:netbox_vespa_plugin:list_vespa', 
                 title='Vespa', 
                 icon_class='fa fa-info', 
                 color=ButtonColorChoices.BLUE
@@ -22,13 +22,6 @@ menu_items = (
                 color=ButtonColorChoices.GREEN,
                 permissions=['netbox_vespa_plugin.vespa_add']
                 ),
-
-            # PluginMenuButton(
-            #     link='vespas', 
-            #     title='API', 
-            #     icon_class='fa fa-minus', 
-            #     color=ButtonColorChoices.RED
-            #     ),
         )
     ),
 )
